@@ -23,9 +23,9 @@
 
 其中红色方框为使用说明，需要配置的参数和请求的参数。
 
-设置全局的appkey，这里的appkey是接入centauri，申请应用的时候生成的，可在centauri的接入界面找到（妥善保存）。
+1.设置全局的appkey，这里的appkey是接入centauri，申请应用的时候生成的，可在centauri的接入界面找到（妥善保存）。
 
-点击后上角的`Environment`和下方的`Edit`，设置`Global`参数APP_KEY，如下所示：
+2.点击右上角的`Environment`和下方的`Edit`，设置`Global`参数APP_KEY，如下所示：
 
 ![image](https://user-images.githubusercontent.com/82426537/114562941-8b8eee80-9ca1-11eb-97ce-4f128855b261.png)
 
