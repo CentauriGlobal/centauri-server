@@ -8,7 +8,6 @@
 ## 导入
 
 脚本和相关配置，统一保存在[Collection V2](https://go.pstmn.io/collection-v2)的`JSON`文件中。开发者可以点击Postman界面左上角的`Import`按钮或者通过`File`中的`Import`发起导入。选择本地的`centauri_server.postman_collection.json`，点击确认后，导入便完成了。![image](https://user-images.githubusercontent.com/82426537/114562705-5387ab80-9ca1-11eb-92df-4ab46cc026e4.png)
-![企业微信截图_d227d85a-7507-4e65-bba3-1eb6f6dc243c](/Users/chrisqguo/Library/Containers/com.tencent.WeWorkMac/Data/Library/Application Support/WXWork/Data/1688850554649837/Cache/Image/2021-04/企业微信截图_d227d85a-7507-4e65-bba3-1eb6f6dc243c.png)
 
 你会发现在左侧Collection下新增了名为`centauri_server`的一组请求。
 
@@ -16,11 +15,11 @@
 
 选中`centauri_server`，右键`Edit`进入Collection的配置页面。如图所示。
 
-![企业微信截图_20c9cc14-6aa4-4a3c-ad67-f3773b621b70](/Users/chrisqguo/Library/Containers/com.tencent.WeWorkMac/Data/Library/Application Support/WXWork/Data/1688850554649837/Cache/Image/2021-04/企业微信截图_20c9cc14-6aa4-4a3c-ad67-f3773b621b70.png)
+![image](https://user-images.githubusercontent.com/82426537/114562841-74e89780-9ca1-11eb-9dbe-0df49ab04c23.png)
 
 在弹出的`Edit Collection`的浮层上部的多个分栏中，找到`Pre-request Scripts`一栏。
 
-![企业微信截图_d179ca26-de69-495a-bfd7-8d4b8292b4e8](/Users/chrisqguo/Library/Containers/com.tencent.WeWorkMac/Data/Library/Application Support/WXWork/Data/1688850554649837/Cache/Image/2021-04/企业微信截图_d179ca26-de69-495a-bfd7-8d4b8292b4e8.png)
+![image](https://user-images.githubusercontent.com/82426537/114562892-7fa32c80-9ca1-11eb-80b7-8acc3bbee594.png)
 
 其中红色方框为使用说明，需要配置的参数和请求的参数。
 
@@ -28,13 +27,13 @@
 
 点击后上角的`Environment`和下方的`Edit`，设置`Global`参数APP_KEY，如下所示：
 
-![企业微信截图_1baed5fc-3626-4fe9-b931-30cae9fa9549](/Users/chrisqguo/Library/Containers/com.tencent.WeWorkMac/Data/Library/Application Support/WXWork/Data/1688850554649837/Cache/Image/2021-04/企业微信截图_1baed5fc-3626-4fe9-b931-30cae9fa9549.png)
+![image](https://user-images.githubusercontent.com/82426537/114562941-8b8eee80-9ca1-11eb-97ce-4f128855b261.png)
 
 ## 配置请求
 
-现在回到请求的配置界面吧。接下来，你可以按照协议去设置请求的信息了，如方法、URL、请求参数、Body。最后，按照使用说明配置两项`{{ts}}`、`{{sig}}`：![企业微信截图_77ebc8bf-f2c2-4c8c-8b5b-1a41991115a3](/Users/chrisqguo/Library/Containers/com.tencent.WeWorkMac/Data/Library/Application Support/WXWork/Data/1688850554649837/Cache/Image/2021-04/企业微信截图_77ebc8bf-f2c2-4c8c-8b5b-1a41991115a3.png)
-
-![企业微信截图_e674d099-d771-4edf-bf26-ef1c4e8c9ea9](/Users/chrisqguo/Library/Containers/com.tencent.WeWorkMac/Data/Library/Application Support/WXWork/Data/1688850554649837/Cache/Image/2021-04/企业微信截图_e674d099-d771-4edf-bf26-ef1c4e8c9ea9.png)
+现在回到请求的配置界面吧。接下来，你可以按照协议去设置请求的信息了，如方法、URL、请求参数、Body。最后，按照使用说明配置两项`{{ts}}`、`{{sig}}`：
+![image](https://user-images.githubusercontent.com/82426537/114562996-98abdd80-9ca1-11eb-87d9-e79301ec9da6.png)
+![image](https://user-images.githubusercontent.com/82426537/114563015-9ea1be80-9ca1-11eb-80bb-12f6e11e6d82.png)
 
 ## 发起请求
 
@@ -43,8 +42,7 @@
 1.点击左下方的`console`，可以看到计算`V3签名`的各步骤的中间关键结果，以及最终算出的签名`sig`；
 
 2.最终可以在返回栏中看到游戏币各接口的请求结果。
-
-![企业微信截图_0bfc500f-be42-4466-aa96-d83ad5a3ddf6](/Users/chrisqguo/Library/Containers/com.tencent.WeWorkMac/Data/Library/Application Support/WXWork/Data/1688850554649837/Cache/Image/2021-04/企业微信截图_0bfc500f-be42-4466-aa96-d83ad5a3ddf6.png)
+![image](https://user-images.githubusercontent.com/82426537/114563092-ad887100-9ca1-11eb-9d2a-9fe0a0dbecaa.png)
 
 ## 实现原理
 
