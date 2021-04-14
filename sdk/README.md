@@ -1,2 +1,0 @@
-# centauri
-fads
