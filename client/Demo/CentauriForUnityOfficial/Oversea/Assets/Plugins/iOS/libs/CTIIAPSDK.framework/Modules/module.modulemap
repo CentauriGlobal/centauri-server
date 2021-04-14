@@ -1,0 +1,6 @@
+framework module CTIIAPSDK {
+  umbrella header "CTIIAPSDK.h"
+
+  export *
+  module * { export * }
+}

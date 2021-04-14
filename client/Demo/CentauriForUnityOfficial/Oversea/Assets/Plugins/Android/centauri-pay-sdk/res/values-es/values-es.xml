@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="unipay_abroad_iconsuc">iconsuc</string>
+    <string name="unipay_abroad_warnpic">warnpic</string>
+    <string name="unipay_buy">Comprar</string>
+    <string name="unipay_cancel">Cancelar</string>
+    <string name="unipay_dlg_tip">Recordatorio</string>
+    <string name="unipay_hints">Recordar</string>
+    <string name="unipay_key_time_error">Su hora actual del sistema es incorrecta, ajústela.</string>
+    <string name="unipay_network_error_1">Error de red (código de error)</string>
+    <string name="unipay_network_error_2">Se agotó el tiempo de conexión de la red, compruebe la red.</string>
+    <string name="unipay_network_error_3">Se agotó el tiempo de respuesta de la red, compruebe la red.</string>
+    <string name="unipay_network_error_4">Error de conexión de la red, compruebe la red.</string>
+    <string name="unipay_network_error_5">Error de red, inténtelo de nuevo más tarde.</string>
+    <string name="unipay_no_charge_hints">Ahora está entrando en el modo de prueba del juego y aquí las compras no se aplican al modo de juego real. No adquiera ningún elemento a no ser que esté evaluando el juego. Gracias.</string>
+    <string name="unipay_no_sim">No se detecta ninguna tarjeta SIM</string>
+    <string name="unipay_order_release_tip">Estamos entrando en un entorno de pago seguro.</string>
+    <string name="unipay_order_sanbox_tip">Entrando en el Sistema reservado de pago\nVersión:</string>
+    <string name="unipay_pay_busy">Sistema ocupado, vuelva a intentarlo más tarde.</string>
+    <string name="unipay_pay_buy">Comprar</string>
+    <string name="unipay_pay_error_tip">Error al pagar, inténtelo de nuevo más tarde.</string>
+    <string name="unipay_pay_no_goods">Error en la lista de productos</string>
+    <string name="unipay_pay_unkwon">No se pudo acceder a la Información de pago, compruebe su cuenta.</string>
+    <string name="unipay_sure">Confirmar</string>
+    <string name="unipay_waiting">Espere un momento…</string>
+</resources>

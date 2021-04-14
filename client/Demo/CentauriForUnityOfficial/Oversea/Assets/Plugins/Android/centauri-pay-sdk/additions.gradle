@@ -1,0 +1,7 @@
+dependencies {
+        //必须排除对本地support包的引用，否则会冲突
+	compile fileTree(dir: 'libs', exclude: ['android-support-v4.jar'], include: ['*.jar'])
+	implementation 'com.android.support:appcompat-v7:27.1.1'
+	implementation 'com.android.billingclient:billing:3.0.2'
+	//compile rootProject.ext.commonDependencies["support-v4"]
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="unipay_buy">Bayar</string>
+    <string name="unipay_cancel">Batal</string>
+    <string name="unipay_dlg_tip">Catat</string>
+    <string name="unipay_error_sub_owned_diffuser">Akun Google Play ini sudah digunakan oleh akun JOOX lain. Beli dengan akun Google Play lainnya.</string>
+    <string name="unipay_hints">Catat</string>
+    <string name="unipay_jlz_query_productinfo_error">Kesalahan saat query item</string>
+    <string name="unipay_key_time_error">Waktu sistem Anda salah. Harap atur ulang.</string>
+    <string name="unipay_network_error_1">Kesalahan jaringan (kode kesalahan)</string>
+    <string name="unipay_network_error_2">Sambungan jaringan sudah habis waktu. Mohon periksa jaringan</string>
+    <string name="unipay_network_error_3">Respons jaringan habis waktunya! Mohon periksa jaringan.</string>
+    <string name="unipay_network_error_4">Kesalahan jaringan! Mohon periksa jaringan.</string>
+    <string name="unipay_network_error_5">Kesalahan jaringan! Silakan coba lagi nanti.</string>
+    <string name="unipay_no_charge_hints">Anda sekarang menggunakan mode pengujian. Item yang dibeli dalam mode ini TIDAK BISA digunakan di lingkungan publik. Mohon jangan membeli item apapun bila Anda bukan penguji</string>
+    <string name="unipay_no_sim">Tidak terdeteksi kartu SIM</string>
+    <string name="unipay_order_release_tip">Memasuki wilayah pembayaran yang aman.</string>
+    <string name="unipay_order_sanbox_tip">Memasuk wilayah pembayaran yang aman</string>
+    <string name="unipay_pay_busy">Sistem sibuk, silahkan coba lagi nanti.</string>
+    <string name="unipay_pay_buy">Bayar</string>
+    <string name="unipay_pay_error_tip">Kesalahan pembayaran! Mohon coba kembali.</string>
+    <string name="unipay_pay_fortumo_tip">Kartu SIM diperlukan untuk menyelesaikan pembayaran. Pastikan kartu SIM Anda terpasang dengan benar dan lanjutkan.</string>
+    <string name="unipay_pay_no_goods">Kesalahan daftar produk</string>
+    <string name="unipay_pay_unkwon">Gagal mengakses informasi pembayaran, periksa detail akun Anda.</string>
+    <string name="unipay_sure">Konfirm</string>
+    <string name="unipay_waiting">Silakan tunggu beberapa saat.</string>
+</resources>

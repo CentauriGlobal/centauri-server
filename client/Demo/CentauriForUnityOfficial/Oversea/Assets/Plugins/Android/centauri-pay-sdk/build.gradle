@@ -1,0 +1,38 @@
+apply plugin: 'com.android.library'
+apply from: 'additions.gradle'
+
+android {
+	sourceSets {
+		main {
+			manifest.srcFile 'AndroidManifest.xml'
+			//java.srcDirs = ['src']
+			res.srcDirs = ['res']
+			assets.srcDirs = ['assets']
+			jniLibs.srcDirs = ['libs']
+		}
+	}
+	
+	compileSdkVersion rootProject.ext.commonVersions.compileSdkVersion
+	buildToolsVersion rootProject.ext.commonVersions.buildToolsVersion
+	defaultConfig {
+		targetSdkVersion rootProject.ext.commonVersions.targetSdkVersion
+	}
+
+	lintOptions {
+		abortOnError false
+	}
+	
+	packageBuildConfig false
+	packagingOptions {
+		exclude '**/BuildConfig.class'
+	}
+	
+	buildTypes {
+        debug {
+            consumerProguardFiles 'proguard-project.txt'
+        }
+        release {
+            consumerProguardFiles 'proguard-project.txt'
+        }
+    }
+}
