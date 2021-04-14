@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="unipay_buy">支付</string>
+    <string name="unipay_cancel">取消</string>
+    <string name="unipay_dlg_tip">温馨提示</string>
+    <string name="unipay_error_sub_owned_diffuser">此Google Play帐户已用于另一个JOOX帐户，请使用其他Google Play帐户进行购买。如有疑问，请联系我们。</string>
+    <string name="unipay_error_sub_upgrade_purchase_null">原购买订阅信息查询出错。</string>
+    <string name="unipay_hints">提示</string>
+    <string name="unipay_jlz_query_productinfo_error">查询物品信息异常</string>
+    <string name="unipay_key_time_error">您的手机系统时间不正确，请设置</string>
+    <string name="unipay_network_error_1">网络异常(错误码)</string>
+    <string name="unipay_network_error_2">网络连接超时，请检查网络</string>
+    <string name="unipay_network_error_3">网络响应超时，请检查网络</string>
+    <string name="unipay_network_error_4">网络连接异常，请检查网络</string>
+    <string name="unipay_network_error_5">网络异常，请稍后再试</string>
+    <string name="unipay_no_charge_hints">您正在使用的是测试模式。这里的购买将无法在正式环境使用。如果您不是测试人员，请勿充值</string>
+    <string name="unipay_no_sim">没有检测到SIM卡</string>
+    <string name="unipay_order_release_tip">正在进入安全支付环境</string>
+    <string name="unipay_order_sanbox_tip">进入沙箱支付环境\n版本号:</string>
+    <string name="unipay_pay_busy">系统繁忙，请稍后再试</string>
+    <string name="unipay_pay_buy">支付</string>
+    <string name="unipay_pay_error_tip">支付失败!请稍后再试。</string>
+    <string name="unipay_pay_fortumo_tip">支付需要依赖于SIM卡，请插入SIM卡后重试。</string>
+    <string name="unipay_pay_no_goods">物品列表异常</string>
+    <string name="unipay_pay_unkwon">访问支付信息失败，请检查您的账号信息</string>
+    <string name="unipay_sure">确定</string>
+    <string name="unipay_waiting">请稍候…</string>
+</resources>

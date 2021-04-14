@@ -1,0 +1,127 @@
+# !/bin/bash
+# from http://www.xgiovio.com/blog-photos-videos-other/blog/resign-your-ios-ipa-frameworks-and-plugins-included/
+
+
+# 使用方法: sh ios_set_keychain ../IOS/MidasSample.ipa "iPhone Developer: Deren Su (6CLGCK4S32)"
+# 参数1：ipa文件路径；参数2：证书ID
+# 可通过 security find-identity -v -p codesigning 命令查看当前mac上有可用的付费证书ID
+
+
+#plist文件名
+plistFile="entitlements.plist"
+
+#描述文件名
+MOBILEPROV="embedded.mobileprovision"
+
+
+# 当前脚本的目录定义为基础目录
+# basePath=$(dirname $0)
+basePath=$(cd "$(dirname "$0")";pwd)
+echo "基础目录地址 basePath : $basePath"
+
+# ipa路径
+ipaFilePath=${1}
+if [ ! -f "$ipaFilePath" ]; then
+    echo "未找到ipa包 $ipaFilePath"
+    exit 2
+fi
+
+DEVELOP_CER_ID=${2}
+echo "证书ID： $DEVELOP_CER_ID"
+
+
+# 当前ipa解压路径
+temIpaDirName="TempPayload"
+temIpaDirPath="${basePath}/${temIpaDirName}"
+echo "当前ipa解压路径 temIpaDirPath : $temIpaDirPath"
+
+
+
+# 删除临时解包目录
+if [ -d "$temIpaDirPath" ]; then
+    echo "删除临时解包目录 rm ${temIpaDirPath}"
+    rm -rf "${temIpaDirPath}"
+fi
+
+
+# 删除entitlements.plist
+if [ -f "$plistFile" ]; then
+    echo "清理entitlements.plist"
+    rm "${plistFile}"
+fi
+
+# 删除embedded.mobileprovision
+if [ -f "$MOBILEPROV" ]; then
+    echo "清理entitlements.plist"
+    rm "${MOBILEPROV}"
+fi
+
+
+######  1.解压ipa并找到embedded.mobileprovision文件
+
+# 解包IPA
+if [[ -f "$ipaFilePath" ]]; then
+    echo "unzip $ipaFilePath begin ..."
+    unzip "$ipaFilePath" -d "$temIpaDirPath"
+fi 
+
+
+# 定位到 *.app 目录及 embedded.mobileprovision
+appDir="$temIpaDirPath/Payload/`ls "$temIpaDirPath/"Payload`"
+provisionDir="${appDir}/${MOBILEPROV}"
+echo "embedded.mobileprovision文件路径: $provisionDir"
+
+
+
+
+
+######  2.从embedded.mobileprovision解析出entitlements.plist文件
+
+cp $provisionDir $basePath
+
+
+#获取描述文件里的授权机制(entitlements.plist)
+RESIGN_ENTITLEMWNTS_FULL="entitlements_full.plist"
+RESIGN_ENTITLEMWNTS="entitlements.plist"
+security cms -D -i "$MOBILEPROV" > "$RESIGN_ENTITLEMWNTS_FULL"
+/usr/libexec/PlistBuddy -x -c 'Print:Entitlements' "$RESIGN_ENTITLEMWNTS_FULL" > "$RESIGN_ENTITLEMWNTS"
+
+
+rm "$RESIGN_ENTITLEMWNTS_FULL"
+
+
+######  3.用MAC自带PlistBuddy修改plistentitlements.plist文件，追加midas的keychain设置
+
+#keychain-access-groups字段
+keyaccess=$(/usr/libexec/PlistBuddy -c "Print keychain-access-groups" "${plistFile}")
+echo "Original key-access-groups: "+ $keyaccess
+
+#获取team-identifier
+teamId=$(/usr/libexec/PlistBuddy -c "Print com.apple.developer.team-identifier" "${plistFile}")
+
+#设置midas的keychain
+/usr/libexec/PlistBuddy -c 'Add :keychain-access-groups: string '${teamId}'".$(CFBundleIdentifier)"' "${plistFile}"
+/usr/libexec/PlistBuddy -c 'Add :keychain-access-groups: string '${teamId}'".com.centauri.wsj.keystoregroup"' "${plistFile}"
+
+# /usr/libexec/PlistBuddy -c 'Add :keychain-access-groups: string "3663N95WE7.$(CFBundleIdentifier)"' "${plistFile}"
+# /usr/libexec/PlistBuddy -c 'Add :keychain-access-groups: string "3663N95WE7.com.entauri.wsj.keystoregroup"' "${plistFile}"
+
+
+keyaccess=$(/usr/libexec/PlistBuddy -c "Print keychain-access-groups" "${plistFile}")
+echo "New key-access-groups: "+ $keyaccess
+
+
+#获取传进来的ipa文件所在的路径
+resignIpaPath="${ipaFilePath%.*}_resign.ipa"	# {ipaFilePath%.*}表示去掉变量ipaFilePath从右边算起的最后一个'.'字符及其右边的内容
+
+echo "resign ipa path: $resignIpaPath"
+
+sh ios_resign_create_ipa "$ipaFilePath" "$DEVELOP_CER_ID" "$MOBILEPROV" "$resignIpaPath"
+
+
+# 删除临时解包目录
+rm -rf "${temIpaDirPath}"
+
+
+
+

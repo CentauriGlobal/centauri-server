@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="unipay_abroad_iconsuc">iconsuc</string>
+    <string name="unipay_abroad_warnpic">warnpic</string>
+    <string name="unipay_buy">Comprar</string>
+    <string name="unipay_cancel">Cancelar</string>
+    <string name="unipay_dlg_tip">Lembrete Amigável</string>
+    <string name="unipay_hints">Lembrete</string>
+    <string name="unipay_key_time_error">Sua hora do sistema actual está incorrecta, redefina-a.</string>
+    <string name="unipay_network_error_1">Erro de rede (código de erro)</string>
+    <string name="unipay_network_error_2">Tempo de conexão de rede expirado, verifique a rede.</string>
+    <string name="unipay_network_error_3">Tempo de resposta de rede expirado, verifique a rede.</string>
+    <string name="unipay_network_error_4">Erro de conexão de rede, verifique a rede.</string>
+    <string name="unipay_network_error_5">Erro de rede, tente novamente mais tarde.</string>
+    <string name="unipay_no_charge_hints">Agora você está entrando no modo de teste de jogo, qualquer compra aqui não se aplica ao próprio modo de jogo. Por favor não compre qualquer item se você não estiver no testador(es) de jogo.  Obrigado.</string>
+    <string name="unipay_no_sim">Nenhum cartão SIM detectado</string>
+    <string name="unipay_order_release_tip">Estamos entrando em um ambiente de pagamento seguro.</string>
+    <string name="unipay_order_sanbox_tip">Entrando no Sistema de Pagamento Sandbox\nVersão:</string>
+    <string name="unipay_pay_busy">Sistema ocupado, tente novamente mais tarde!</string>
+    <string name="unipay_pay_buy">Comprar</string>
+    <string name="unipay_pay_error_tip">Erro de pagamento, tente novamente mais tarde.</string>
+    <string name="unipay_pay_no_goods">Erro lista de produto</string>
+    <string name="unipay_pay_unkwon">Falha ao acessar a informação da forma de Pagamento, verifique sua conta.</string>
+    <string name="unipay_sure">Confirmar</string>
+    <string name="unipay_waiting">Aguarde um momento…</string>
+</resources>

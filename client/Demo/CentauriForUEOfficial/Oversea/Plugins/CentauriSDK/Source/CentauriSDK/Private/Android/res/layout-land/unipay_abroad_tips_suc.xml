@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/unipay_abroad_wrap" >
+
+    <View style="@style/unipay_abroad_fill.bg" />
+    <!-- cont suc -->
+    <LinearLayout
+        style="@style/unipay_dialog.land" >
+        <ImageView style="@style/unipay_abroad_wrap.iconsuc" />
+
+            <TextView
+            style="@style/unipay_abroad_result_txt"
+                android:text="@string/unipay_payment_successful" />
+
+            <LinearLayout
+                style="@style/unipay_abroad_wrap"
+                android:visibility="invisible"
+            android:layout_marginBottom="5dp" >
+                <TextView
+                     android:id="@+id/unipay_id_name"
+                style="@style/unipay_abroad_result_txt.sub"
+                    android:text="diamonds"/>
+                <TextView
+                    android:id="@+id/unipay_id_succnum"
+                style="@style/unipay_abroad_result_txt.sub.em"
+                    android:text="×100"/>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- cont over -->
+</RelativeLayout>

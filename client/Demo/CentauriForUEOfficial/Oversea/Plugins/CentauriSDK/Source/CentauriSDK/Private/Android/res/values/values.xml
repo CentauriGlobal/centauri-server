@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="unipay_abort_channel_bg_color">#525252</color>
+    <color name="unipay_abort_link_color">#FF3c78b4</color>
+    <color name="unipay_abroad_container_bg">#313131</color>
+    <color name="unipay_abroad_dark_bg">#313131</color>
+    <color name="unipay_abroad_em1">#FF000000</color>
+    <color name="unipay_abroad_em2">#FFff8a00</color>
+    <color name="unipay_abroad_thin1">#FFffffff</color>
+    <color name="unipay_abroad_thin2">#FF999999</color>
+    <color name="unipay_abroad_trans">#90000000</color>
+    <color name="unipay_abroad_transparent">#00000000</color>
+    <color name="unipay_btn_color">#FF333333</color>
+    <color name="unipay_btn_high1_color">#FFFF7700</color>
+    <color name="unipay_country_list_color">#40404040</color>
+    <dimen name="unipay_abroad_hori_simplegrid_space">10dp</dimen>
+    <dimen name="unipay_abroad_horizontal_padding">12dp</dimen>
+    <dimen name="unipay_abroad_item_space">14dp</dimen>
+    <dimen name="unipay_abroad_size1">14sp</dimen>
+    <dimen name="unipay_activity_horizontal_margin">10dp</dimen>
+    <dimen name="unipay_activity_vertical_margin">10dp</dimen>
+    <string name="unipay_abroad_iconsuc">iconsuc</string>
+    <string name="unipay_abroad_iconwarn">iconwarn</string>
+    <string name="unipay_abroad_warnpic">warnpic</string>
+    <string name="unipay_buy">Purchase</string>
+    <string name="unipay_cancel">Cancel</string>
+    <string name="unipay_country_AC">Ascension(AC)</string>
+    <string name="unipay_country_AD">Andorra(AD)</string>
+    <string name="unipay_country_AE">United Arab Emirates(AE)</string>
+    <string name="unipay_country_AF">Afghanistan(AF)</string>
+    <string name="unipay_country_AG">Antigua and Barbuda(AG)</string>
+    <string name="unipay_country_AI">Anguilla(AI)</string>
+    <string name="unipay_country_AL">Albania(AL)</string>
+    <string name="unipay_country_AM">Armenia(AM)</string>
+    <string name="unipay_country_AN">Netheriands Antilles(AN)</string>
+    <string name="unipay_country_AO">Angola(AO)</string>
+    <string name="unipay_country_AR">Argentina(AR)</string>
+    <string name="unipay_country_AT">Austria(AT)</string>
+    <string name="unipay_country_AU">Australia(AU)</string>
+    <string name="unipay_country_AZ">Azerbaijan(AZ)</string>
+    <string name="unipay_country_BA">Bosnia and Herzegovina(BA)</string>
+    <string name="unipay_country_BB">Barbados(BB)</string>
+    <string name="unipay_country_BD">Bangladesh(BD)</string>
+    <string name="unipay_country_BE">Belgium(BE)</string>
+    <string name="unipay_country_BF">Burkina-faso(BF)</string>
+    <string name="unipay_country_BG">Bulgaria(BG)</string>
+    <string name="unipay_country_BH">Bahrain(BH)</string>
+    <string name="unipay_country_BI">Burundi(BI)</string>
+    <string name="unipay_country_BJ">Benin(BJ)</string>
+    <string name="unipay_country_BM">Bermuda Is.(BM)</string>
+    <string name="unipay_country_BN">Brunei(BN)</string>
+    <string name="unipay_country_BO">Bolivia(BO)</string>
+    <string name="unipay_country_BR">Brazil(BR)</string>
+    <string name="unipay_country_BS">Bahamas(BS)</string>
+    <string name="unipay_country_BT">Bhutan(BT)</string>
+    <string name="unipay_country_BW">Botswana(BW)</string>
+    <string name="unipay_country_BY">Belarus(BY)</string>
+    <string name="unipay_country_BZ">Belize(BZ)</string>
+    <string name="unipay_country_CA">Canada(CA)</string>
+    <string name="unipay_country_CF">Central African Republic(CF)</string>
+    <string name="unipay_country_CG">Congo(CG)</string>
+    <string name="unipay_country_CH">Switzerland(CH)</string>
+    <string name="unipay_country_CI">Ivory Coast(CI)</string>
+    <string name="unipay_country_CK">Cook Is.(CK)</string>
+    <string name="unipay_country_CL">Chile(CL)</string>
+    <string name="unipay_country_CM">Cameroon(CM)</string>
+    <string name="unipay_country_CN">China(CN)</string>
+    <string name="unipay_country_CO">Colombia(CO)</string>
+    <string name="unipay_country_CR">Costa Rica(CR)</string>
+    <string name="unipay_country_CU">Cuba(CU)</string>
+    <string name="unipay_country_CV">CApe Verde Is(CV)</string>
+    <string name="unipay_country_CY">Cyprus(CY)</string>
+    <string name="unipay_country_CZ">Czech Republic(CZ)</string>
+    <string name="unipay_country_DE">Germany(DE)</string>
+    <string name="unipay_country_DJ">Djibouti(DJ)</string>
+    <string name="unipay_country_DK">Denmark(DK)</string>
+    <string name="unipay_country_DM">Dominica(DM)</string>
+    <string name="unipay_country_DO">Dominica Rep.(DO)</string>
+    <string name="unipay_country_DZ">Algeria(DZ)</string>
+    <string name="unipay_country_EC">Ecuador(EC)</string>
+    <string name="unipay_country_EE">Estonia(EE)</string>
+    <string name="unipay_country_EG">Egypt(EG)</string>
+    <string name="unipay_country_ER">eritrea(ER)</string>
+    <string name="unipay_country_ES">Spain(ES)</string>
+    <string name="unipay_country_ET">Ethiopia(ET)</string>
+    <string name="unipay_country_FI">Finland(FI)</string>
+    <string name="unipay_country_FJ">Fiji(FJ)</string>
+    <string name="unipay_country_FM">Micronesia(FM)</string>
+    <string name="unipay_country_FR">France(FR)</string>
+    <string name="unipay_country_GA">Gabon(GA)</string>
+    <string name="unipay_country_GB">United Kiongdom(GB)</string>
+    <string name="unipay_country_GD">Grenada(GD)</string>
+    <string name="unipay_country_GE">Georgia(GE)</string>
+    <string name="unipay_country_GF">French Guiana(GF)</string>
+    <string name="unipay_country_GH">Ghana(GH)</string>
+    <string name="unipay_country_GI">Gibraltar(GI)</string>
+    <string name="unipay_country_GM">Gambia(GM)</string>
+    <string name="unipay_country_GN">Guinea(GN)</string>
+    <string name="unipay_country_GQ">Equatorial Guinea(GQ)</string>
+    <string name="unipay_country_GR">Greece(GR)</string>
+    <string name="unipay_country_GT">Guatemala(GT)</string>
+    <string name="unipay_country_GU">Guam(GU)</string>
+    <string name="unipay_country_GW">Guinea-Bissau(GW)</string>
+    <string name="unipay_country_GY">Guyana(GY)</string>
+    <string name="unipay_country_HK">Hongkong(HK)</string>
+    <string name="unipay_country_HN">Honduras(HN)</string>
+    <string name="unipay_country_HR">Croatia(HR)</string>
+    <string name="unipay_country_HT">Haiti(HT)</string>
+    <string name="unipay_country_HU">Hungary(HU)</string>
+    <string name="unipay_country_ID">Indonesia(ID)</string>
+    <string name="unipay_country_IE">Ireland(IE)</string>
+    <string name="unipay_country_IL">Israel(IL)</string>
+    <string name="unipay_country_IN">India(IN)</string>
+    <string name="unipay_country_IQ">Iraq(IQ)</string>
+    <string name="unipay_country_IR">Iran(IR)</string>
+    <string name="unipay_country_IS">Iceland(IS)</string>
+    <string name="unipay_country_IT">Italy(IT)</string>
+    <string name="unipay_country_JM">Jamaica(JM)</string>
+    <string name="unipay_country_JO">Jordan(JO)</string>
+    <string name="unipay_country_JP">Japan(JP)</string>
+    <string name="unipay_country_KE">Kenya(KE)</string>
+    <string name="unipay_country_KG">Kyrgyzstan(KG)</string>
+    <string name="unipay_country_KH">Kampuchea (Cambodia )(KH)</string>
+    <string name="unipay_country_KI">Kiribati(KI)</string>
+    <string name="unipay_country_KM">Comoros(KM)</string>
+    <string name="unipay_country_KP">North Korea(KP)</string>
+    <string name="unipay_country_KR">Korea(KR)</string>
+    <string name="unipay_country_KT">Ivory Coast(KT)</string>
+    <string name="unipay_country_KW">Kuwait(KW)</string>
+    <string name="unipay_country_KY">Cayman Is.(KY)</string>
+    <string name="unipay_country_KZ">Kazakstan(KZ)</string>
+    <string name="unipay_country_LA">Laos(LA)</string>
+    <string name="unipay_country_LB">Lebanon(LB)</string>
+    <string name="unipay_country_LC">Saint Lueia(LC)</string>
+    <string name="unipay_country_LI">Liechtenstein(LI)</string>
+    <string name="unipay_country_LK">Sri Lanka(LK)</string>
+    <string name="unipay_country_LR">Liberia(LR)</string>
+    <string name="unipay_country_LS">Lesotho(LS)</string>
+    <string name="unipay_country_LT">Lithuania(LT)</string>
+    <string name="unipay_country_LU">Luxembourg(LU)</string>
+    <string name="unipay_country_LV">Latvia(LV)</string>
+    <string name="unipay_country_LY">Libya(LY)</string>
+    <string name="unipay_country_MA">Morocco(MA)</string>
+    <string name="unipay_country_MC">Monaco(MC)</string>
+    <string name="unipay_country_MD">Moldova Republic of(MD)</string>
+    <string name="unipay_country_MG">Madagascar(MG)</string>
+    <string name="unipay_country_MH">Marshall Island (MH)</string>
+    <string name="unipay_country_MK">Macedonia(MK)</string>
+    <string name="unipay_country_ML">Mali(ML)</string>
+    <string name="unipay_country_MM">Burma(MM)</string>
+    <string name="unipay_country_MN">Mongolia(MN)</string>
+    <string name="unipay_country_MO">Macao(MO)</string>
+    <string name="unipay_country_MP">Mariana Is(MP)</string>
+    <string name="unipay_country_MQ">Martinique(MQ)</string>
+    <string name="unipay_country_MR">Mauritania(MR)</string>
+    <string name="unipay_country_MS">Montserrat Is(MS)</string>
+    <string name="unipay_country_MT">Malta(MT)</string>
+    <string name="unipay_country_MU">Mauritius(MU)</string>
+    <string name="unipay_country_MV">Maldives(MV)</string>
+    <string name="unipay_country_MW">Malawi(MW)</string>
+    <string name="unipay_country_MX">Mexico(MX)</string>
+    <string name="unipay_country_MY">Malaysia(MY)</string>
+    <string name="unipay_country_MZ">Mozambique(MZ)</string>
+    <string name="unipay_country_NA">Namibia(NA)</string>
+    <string name="unipay_country_NE">Niger(NE)</string>
+    <string name="unipay_country_NG">Nigeria(NG)</string>
+    <string name="unipay_country_NI">Nicaragua(NI)</string>
+    <string name="unipay_country_NL">Netherlands(NL)</string>
+    <string name="unipay_country_NO">Norway(NO)</string>
+    <string name="unipay_country_NP">Nepal(NP)</string>
+    <string name="unipay_country_NR">Nauru(NR)</string>
+    <string name="unipay_country_NZ">New Zealand(NZ)</string>
+    <string name="unipay_country_OM">Oman(OM)</string>
+    <string name="unipay_country_PA">Panama(PA)</string>
+    <string name="unipay_country_PE">Peru(PE)</string>
+    <string name="unipay_country_PF">French Polynesia(PF)</string>
+    <string name="unipay_country_PG">Papua New Cuinea(PG)</string>
+    <string name="unipay_country_PH">Philippines(PH)</string>
+    <string name="unipay_country_PK">Pakistan(PK)</string>
+    <string name="unipay_country_PL">Poland(PL)</string>
+    <string name="unipay_country_PR">Puerto Rico(PR)</string>
+    <string name="unipay_country_PS">Palestine(PS)</string>
+    <string name="unipay_country_PT">Portugal(PT)</string>
+    <string name="unipay_country_PW">Palau(PW)</string>
+    <string name="unipay_country_PY">Paraguay(PY)</string>
+    <string name="unipay_country_QA">Qatar(QA)</string>
+    <string name="unipay_country_RE">Reunion(RE)</string>
+    <string name="unipay_country_RO">Romania(RO)</string>
+    <string name="unipay_country_RU">Russia(RU)</string>
+    <string name="unipay_country_RW">Rwanda(RW)</string>
+    <string name="unipay_country_SA">Saudi Arabia(SA)</string>
+    <string name="unipay_country_SB">Solomon Is(SB)</string>
+    <string name="unipay_country_SC">Seychelles(SC)</string>
+    <string name="unipay_country_SD">Sudan(SD)</string>
+    <string name="unipay_country_SE">Sweden(SE)</string>
+    <string name="unipay_country_SG">Singapore(SG)</string>
+    <string name="unipay_country_SI">Slovenia(SI)</string>
+    <string name="unipay_country_SK">Slovakia(SK)</string>
+    <string name="unipay_country_SL">Sierra Leone(SL)</string>
+    <string name="unipay_country_SM">San Marino(SM)</string>
+    <string name="unipay_country_SN">Senegal(SN)</string>
+    <string name="unipay_country_SO">Somali(SO)</string>
+    <string name="unipay_country_SR">Suriname(SR)</string>
+    <string name="unipay_country_ST">Sao Tome and Principe(ST)</string>
+    <string name="unipay_country_SV">EI Salvador(SV)</string>
+    <string name="unipay_country_SY">Syria(SY)</string>
+    <string name="unipay_country_SZ">Swaziland(SZ)</string>
+    <string name="unipay_country_TD">Chad(TD)</string>
+    <string name="unipay_country_TG">Togo(TG)</string>
+    <string name="unipay_country_TH">Thailand(TH)</string>
+    <string name="unipay_country_TJ">Tajikstan(TJ)</string>
+    <string name="unipay_country_TM">Turkmenistan(TM)</string>
+    <string name="unipay_country_TN">Tunisia(TN)</string>
+    <string name="unipay_country_TO">Tonga(TO)</string>
+    <string name="unipay_country_TR">Turkey(TR)</string>
+    <string name="unipay_country_TT">Trinidad and Tobago(TT)</string>
+    <string name="unipay_country_TV">Tuvalu(TV)</string>
+    <string name="unipay_country_TW">Taiwan(TW)</string>
+    <string name="unipay_country_TZ">Tanzania(TZ)</string>
+    <string name="unipay_country_UA">Ukraine(UA)</string>
+    <string name="unipay_country_UG">Uganda(UG)</string>
+    <string name="unipay_country_US">United States of America(US)</string>
+    <string name="unipay_country_UY">Uruguay(UY)</string>
+    <string name="unipay_country_UZ">Uzbekistan(UZ)</string>
+    <string name="unipay_country_VA">Vatican City(VA)</string>
+    <string name="unipay_country_VC">Saint Vincent(VC)</string>
+    <string name="unipay_country_VE">Venezuela(VE)</string>
+    <string name="unipay_country_VN">Vietnam(VN)</string>
+    <string name="unipay_country_VU">Vanuatu(VU)</string>
+    <string name="unipay_country_WS">Samoa Western(WS)</string>
+    <string name="unipay_country_YE">Yemen(YE)</string>
+    <string name="unipay_country_YU">Yugoslavia(YU)</string>
+    <string name="unipay_country_ZA">South Africa(ZA)</string>
+    <string name="unipay_country_ZM">Zambia(ZM)</string>
+    <string name="unipay_country_ZR">Zaire(ZR)</string>
+    <string name="unipay_country_ZW">Zimbabwe(ZW)</string>
+    <string name="unipay_dlg_tip">Friendly Reminder</string>
+    <string name="unipay_error">Error</string>
+    <string name="unipay_error_network_not_connected">your are not connected to the network,please connect and try again.</string>
+    <string name="unipay_error_not_installed">Sorry, you haven\'t installed the app</string>
+    <string name="unipay_error_sub_owned_diffuser">Your another account has owned the subscription.</string>
+    <string name="unipay_error_sub_owned_sameuser">You have owned the subscription.</string>
+    <string name="unipay_error_sub_upgrade_purchase_null">\nSubscription old purchase token is null.</string>
+    <string name="unipay_gw_pay_error_account">\nPlease make sure you are logged into your Google Play App Store account, and that you are able to make purchases through this account.</string>
+    <string name="unipay_gw_pay_error_device">\nPlease make sure Google Play is up to date on your device.</string>
+    <string name="unipay_gw_pay_error_item_owned">\nYou already own this item. Please restart the app and check.</string>
+    <string name="unipay_gw_pay_error_null_data">\nGoogle Play Store is blocked from creating pop-up windows. Please check.</string>
+    <string name="unipay_hints">Reminder</string>
+    <string name="unipay_jlz_query_productinfo_error">Query ProductInfo error.</string>
+    <string name="unipay_key_time_error">Your current system time is incorrect, please reset it.</string>
+    <string name="unipay_network_error_1">Network error (error code)</string>
+    <string name="unipay_network_error_2">Network connection timed out, please check the network.</string>
+    <string name="unipay_network_error_3">Network response time-out, please check the network.</string>
+    <string name="unipay_network_error_4">Network connection error, please check the network.</string>
+    <string name="unipay_network_error_5">Network error, please try again later.</string>
+    <string name="unipay_no_charge_hints">You are now entering the game testing mode, any purchase here cannot apply to the actual game mode. Please do not purchase any items if you are not the game tester(s). Thank you.</string>
+    <string name="unipay_no_sim">No SIM Card detected</string>
+    <string name="unipay_order_release_tip">We are entering a secure payment environment.</string>
+    <string name="unipay_order_sanbox_tip">Entering the Sandbox Payment System\nVersion:</string>
+    <string name="unipay_pay_busy">System busy,please try again later.</string>
+    <string name="unipay_pay_buy">Purchase</string>
+    <string name="unipay_pay_error_tip">Payment Error, please try again later.</string>
+    <string name="unipay_pay_fortumo_tip">A SIM card is required to complete the payment .Please make sure your SIM card is inserted properly and continue.</string>
+    <string name="unipay_pay_no_goods">Product list error</string>
+    <string name="unipay_pay_send_explain">Buy %1$s and get extra %2$s diamonds</string>
+    <string name="unipay_pay_send_once">ONCE ONLY</string>
+    <string name="unipay_pay_unkwon">Failed to access to Payment Information, please check your account.</string>
+    <string name="unipay_payment_successful">Payment successful</string>
+    <string name="unipay_sure">Confirm</string>
+    <string name="unipay_tip_setting">go to setting</string>
+    <string name="unipay_try_again">Please try again later.</string>
+    <string name="unipay_waiting">Please wait a moment…</string>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <style name="unipay_CustomProgressDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="unipay_abroad_btn">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/unipay_abroad_drawable_btn</item>
+        <item name="android:textColor">@color/unipay_abroad_thin1</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="unipay_abroad_btn_cancel_style">
+        <item name="android:layout_width">10dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:background">@drawable/unipay_abroad_drawable_btn</item>
+    </style>
+    <style name="unipay_abroad_btn_ok_style">
+        <item name="android:layout_width">10dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:background">@drawable/unipay_abroad_drawable_embtn1</item>
+    </style>
+    <style name="unipay_abroad_btn_wrap">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">20dp</item>
+    </style>
+    <style name="unipay_abroad_embtn">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/unipay_abroad_drawable_embtn</item>
+        <item name="android:textColor">@color/unipay_abroad_thin1</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="unipay_abroad_fill">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    <style name="unipay_abroad_fill.bg">
+        <item name="android:background">@color/unipay_abroad_trans</item>
+    </style>
+    <style name="unipay_abroad_h1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#fff</item>
+
+    </style>
+    <style name="unipay_abroad_head">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@drawable/unipay_abroad_drawable_topbg</item>
+    </style>
+    <style name="unipay_abroad_linear">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="unipay_abroad_linear_ver">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="unipay_abroad_result_txt">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/unipay_abroad_em1</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+    <style name="unipay_abroad_result_txt.sub">
+        <item name="android:textSize">10sp</item>
+    </style>
+    <style name="unipay_abroad_result_txt.sub.em">
+        <item name="android:textColor">@color/unipay_abroad_em2</item>
+    </style>
+    <style name="unipay_abroad_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/unipay_abroad_thin1</item>
+    </style>
+    <style name="unipay_abroad_text.em">
+        <item name="android:textColor">@color/unipay_abroad_em1</item>
+    </style>
+    <style name="unipay_abroad_text.em2">
+        <item name="android:textColor">@color/unipay_abroad_em2</item>
+    </style>
+    <style name="unipay_abroad_text.middle">
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="unipay_abroad_topiccn">
+        <item name="android:layout_width">44dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@null</item>
+
+    </style>
+    <style name="unipay_abroad_wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="unipay_abroad_wrap.iconfail">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:src">@drawable/unipay_abroad_iconwarn</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:contentDescription">@string/unipay_abroad_iconsuc</item>
+        <item name="android:layout_marginBottom">15dp</item>
+    </style>
+    <style name="unipay_abroad_wrap.iconsuc">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:src">@drawable/unipay_abroad_iconsuc</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:contentDescription">@string/unipay_abroad_iconsuc</item>
+        <item name="android:layout_marginBottom">15dp</item>
+    </style>
+    <style name="unipay_btn">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/unipay_abroad_drawable_embtn2</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="unipay_btn.thinbtn">
+        <item name="android:background">@drawable/unipay_abroad_drawable_thinbtn</item>
+        <item name="android:textColor">#333</item>
+    </style>
+    <style name="unipay_customDialog" parent="android:style/Theme.Dialog">
+      <item name="android:windowFrame">@null</item>
+      <item name="android:windowIsFloating">true</item>
+      <item name="android:windowIsTranslucent">true</item>
+      <item name="android:windowNoTitle">true</item>
+      <item name="android:backgroundDimEnabled">true</item>
+      <item name="android:windowBackground">@drawable/unipay_abroad_tipsbg</item>
+    </style>
+    <style name="unipay_dialog">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/unipay_abroad_tipsbg</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">40dp</item>
+        <item name="android:paddingBottom">32dp</item>
+        <item name="android:paddingLeft">26dp</item>
+        <item name="android:paddingRight">26dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="unipay_dialog.land">
+        <item name="android:layout_marginLeft">100dp</item>
+        <item name="android:layout_marginRight">100dp</item>
+    </style>
+    <style name="unipay_dialog_linearLayout">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingLeft">25dp</item>
+        <item name="android:paddingRight">25dp</item>
+        <item name="android:paddingBottom">25dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="unipay_iconwarn">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:contentDescription">@string/unipay_abroad_warnpic</item>
+        <item name="android:background">@drawable/unipay_abroad_iconwarn</item>
+    </style>
+    <style name="unipay_tiptitle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="unipay_tiptitle.sub">
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="unipay_toast">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/unipay_abroad_toastbg</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+</resources>

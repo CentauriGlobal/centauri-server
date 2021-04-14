@@ -1,0 +1,9 @@
+# !/bin/bash
+# from http://www.xgiovio.com/blog-photos-videos-other/blog/resign-your-ios-ipa-frameworks-and-plugins-included/
+
+
+# Midas测试demo使用，写死了ipa路径和证书ID
+
+sh ios_set_keychain ../IOS/MidasSample.ipa "Apple Development: Deren Su (6CLGCK4S32)"
+
+
