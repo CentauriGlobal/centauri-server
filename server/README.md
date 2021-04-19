@@ -31,8 +31,8 @@
 
 ## 配置请求
 
-现在回到请求的配置界面吧。接下来，你可以按照协议去设置请求的信息了，如方法、URL、请求参数、Body。最后，按照使用说明配置两项`{{ts}}`、`{{sig}}`：
-![image](https://user-images.githubusercontent.com/82426537/114562996-98abdd80-9ca1-11eb-87d9-e79301ec9da6.png)
+现在回到请求的配置界面吧。接下来，你可以按照协议去设置请求的信息了，如方法、URL、请求参数、Body。(请求参数中的`{{ts}}`、`{{sig}}`为全局变量，请求是会自动填充，无需修改)
+<img width="1791" alt="企业微信截图_8cfb986b-b6f5-4c02-a4e8-bd3314e5b252" src="https://user-images.githubusercontent.com/82426537/115178250-78e24280-a103-11eb-8782-534e77023e56.png">
 ![image](https://user-images.githubusercontent.com/82426537/114563015-9ea1be80-9ca1-11eb-80bb-12f6e11e6d82.png)
 
 ## 发起请求
