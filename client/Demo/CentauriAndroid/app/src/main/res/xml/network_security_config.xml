@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    　<!--默认允许所有网址使用非安全连接-->
+    <base-config cleartextTrafficPermitted="true" />
+    <debug-overrides>
+        <trust-anchors>
+            <certificates src="@raw/debug_cas"/>
+        </trust-anchors>
+    </debug-overrides>
+</network-security-config>
