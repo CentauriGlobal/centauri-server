@@ -1,0 +1,500 @@
+{
+	"info": {
+		"_postman_id": "13909633-43e2-4ff7-8ca6-c447597c97c2",
+		"name": "centauri_server_v3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "present_m",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "org_loc=/v3/r/mpay/present_m ",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "session_id=hy_gameid",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "session_type=st_dummy",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://sandbox.centauriglobal.com/v3/r/mpay/present_m?appid=1460000020&openid=fcb0e7dbdc3c18a6&openkey=openkey&pf=wechat_abroad_wx-2001-android-2011&pfkey=pfkey&zoneid=1&billno=202104122316&presenttimes=1000&ts={{ts}}&sig={{sig}}",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"centauriglobal",
+						"com"
+					],
+					"path": [
+						"v3",
+						"r",
+						"mpay",
+						"present_m"
+					],
+					"query": [
+						{
+							"key": "appid",
+							"value": "1460000020"
+						},
+						{
+							"key": "openid",
+							"value": "fcb0e7dbdc3c18a6"
+						},
+						{
+							"key": "openkey",
+							"value": "openkey"
+						},
+						{
+							"key": "pf",
+							"value": "wechat_abroad_wx-2001-android-2011"
+						},
+						{
+							"key": "pfkey",
+							"value": "pfkey"
+						},
+						{
+							"key": "zoneid",
+							"value": "1"
+						},
+						{
+							"key": "billno",
+							"value": "202104122316"
+						},
+						{
+							"key": "presenttimes",
+							"value": "1000"
+						},
+						{
+							"key": "ts",
+							"value": "{{ts}}"
+						},
+						{
+							"key": "sig",
+							"value": "{{sig}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_balance_m",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "org_loc=/v3/r/mpay/get_balance_m ",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "session_id=hy_gameid",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "session_type=st_dummy",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://sandbox.centauriglobal.com/v3/r/mpay/get_balance_m?appid=1460000020&openid=fcb0e7dbdc3c18a6&openkey=openkey&pf=wechat_abroad_wx-2001-android-2011&pfkey=pfkey&zoneid=1&ts={{ts}}&sig={{sig}}",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"centauriglobal",
+						"com"
+					],
+					"path": [
+						"v3",
+						"r",
+						"mpay",
+						"get_balance_m"
+					],
+					"query": [
+						{
+							"key": "appid",
+							"value": "1460000020"
+						},
+						{
+							"key": "openid",
+							"value": "fcb0e7dbdc3c18a6"
+						},
+						{
+							"key": "openkey",
+							"value": "openkey"
+						},
+						{
+							"key": "pf",
+							"value": "wechat_abroad_wx-2001-android-2011"
+						},
+						{
+							"key": "pfkey",
+							"value": "pfkey"
+						},
+						{
+							"key": "zoneid",
+							"value": "1"
+						},
+						{
+							"key": "ts",
+							"value": "{{ts}}"
+						},
+						{
+							"key": "sig",
+							"value": "{{sig}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pay_m",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var datejson=pm.response.json();\r",
+							"var databillno=datejson.billno;\r",
+							"pm.environment.set(\"billno\",databillno);\r",
+							" "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "org_loc=/v3/r/mpay/pay_m ",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "session_id=hy_gameid",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "session_type=st_dummy",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://sandbox.centauriglobal.com/v3/r/mpay/pay_m?appid=1460000020&openid=fcb0e7dbdc3c18a6&openkey=openkey&pf=wechat_abroad_wx-2001-android-2011&pfkey=pfKey&amt=1000&billno=202104122315&zoneid=1&appremark=213432432&ts={{ts}}&sig={{sig}}",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"centauriglobal",
+						"com"
+					],
+					"path": [
+						"v3",
+						"r",
+						"mpay",
+						"pay_m"
+					],
+					"query": [
+						{
+							"key": "appid",
+							"value": "1460000020"
+						},
+						{
+							"key": "openid",
+							"value": "fcb0e7dbdc3c18a6"
+						},
+						{
+							"key": "openkey",
+							"value": "openkey"
+						},
+						{
+							"key": "pf",
+							"value": "wechat_abroad_wx-2001-android-2011"
+						},
+						{
+							"key": "pfkey",
+							"value": "pfKey"
+						},
+						{
+							"key": "amt",
+							"value": "1000"
+						},
+						{
+							"key": "billno",
+							"value": "202104122315"
+						},
+						{
+							"key": "zoneid",
+							"value": "1"
+						},
+						{
+							"key": "appremark",
+							"value": "213432432"
+						},
+						{
+							"key": "ts",
+							"value": "{{ts}}"
+						},
+						{
+							"key": "sig",
+							"value": "{{sig}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cancel_pay_m",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "org_loc=/v3/r/mpay/cancel_pay_m ",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "session_id=hy_gameid",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "session_type=st_dummy",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://sandbox.centauriglobal.com/v3/r/mpay/cancel_pay_m?appid=1460000020&openid=fcb0e7dbdc3c18a6&openkey=openkey&pf=wechat_abroad_wx-2001-android-2011&pfkey=pfkey&zoneid=1&billno=202104122315&ts={{ts}}&sig={{sig}}",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"centauriglobal",
+						"com"
+					],
+					"path": [
+						"v3",
+						"r",
+						"mpay",
+						"cancel_pay_m"
+					],
+					"query": [
+						{
+							"key": "appid",
+							"value": "1460000020"
+						},
+						{
+							"key": "openid",
+							"value": "fcb0e7dbdc3c18a6"
+						},
+						{
+							"key": "openkey",
+							"value": "openkey"
+						},
+						{
+							"key": "pf",
+							"value": "wechat_abroad_wx-2001-android-2011"
+						},
+						{
+							"key": "pfkey",
+							"value": "pfkey"
+						},
+						{
+							"key": "zoneid",
+							"value": "1"
+						},
+						{
+							"key": "billno",
+							"value": "202104122315"
+						},
+						{
+							"key": "ts",
+							"value": "{{ts}}"
+						},
+						{
+							"key": "sig",
+							"value": "{{sig}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_product_list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://sandbox.centauriglobal.com/api/oversea/get_product_list?offer_id=1460000020&channel=os_steam&currency_type=USD&product_type=save&ts={{ts}}&sig={{sig}}",
+					"protocol": "http",
+					"host": [
+						"sandbox",
+						"centauriglobal",
+						"com"
+					],
+					"path": [
+						"api",
+						"oversea",
+						"get_product_list"
+					],
+					"query": [
+						{
+							"key": "offer_id",
+							"value": "1460000020"
+						},
+						{
+							"key": "channel",
+							"value": "os_steam"
+						},
+						{
+							"key": "currency_type",
+							"value": "USD"
+						},
+						{
+							"key": "product_type",
+							"value": "save"
+						},
+						{
+							"key": "ts",
+							"value": "{{ts}}"
+						},
+						{
+							"key": "sig",
+							"value": "{{sig}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"/***********使用说明************/",
+					"//1.对于get请求，参数需放在postman的【Params】列，post请求放在【Body】,格式json",
+					"//2.参数中对于ts、sig设置为变量的形式{{ts}}、{{sig}}",
+					"//3.设置全局的appkey,即APP_KEY=xxxxx ",
+					"",
+					"/***********设置时间戳************/",
+					"var req_ts=Math.round(new Date()/1000);",
+					"pm.globals.unset(\"ts\");",
+					"pm.globals.set(\"ts\", req_ts);",
+					"/***********获取签名原串************/",
+					"let jsonBody = {};",
+					"if(pm.request.method.toUpperCase()===\"POST\"){",
+					"    jsonBody = JSON.parse(pm.request.body);",
+					"    delete jsonBody.sig",
+					"    jsonBody[\"ts\"]=req_ts",
+					"    console.log(jsonBody)",
+					"}else{",
+					"    const paramsString = request.url.split('?')[1];",
+					"    const eachParamArray = paramsString.split('&');",
+					"    eachParamArray.forEach((param) => {",
+					"        const key = param.split('=')[0];",
+					"        const value = param.split('=')[1];",
+					"        Object.assign(jsonBody, {[key]: value});",
+					"    });",
+					"    delete jsonBody.sig",
+					"    jsonBody[\"ts\"]=req_ts",
+					"}",
+					"/***********签名算法************/",
+					"",
+					"const urlEncode = function (str) {",
+					"  return encodeURIComponent(str).replace(/[!'()*]/g, function (c) {",
+					"    return `%${c.charCodeAt(0).toString(16)}.`;",
+					"  });",
+					"};",
+					"const stringifyValue = (value) => {",
+					"  if (value === null || value === undefined) {",
+					"    return ``;",
+					"  }",
+					"  if (typeof value === `object`) {",
+					"    return JSON.stringify(value);",
+					"  }",
+					"  return String(value);",
+					"};",
+					"function fixedEncodeURIComponent(str) {",
+					"    return encodeURIComponent(str).replace(/[!'()*]/g, c => `%${c.charCodeAt(0).toString(16)",
+					"        .toUpperCase()}`);",
+					"}",
+					"class V3SigService {",
+					"  constructor() {}",
+					"  makeV3Sig(method, urlpath, params, secret) {",
+					"    const realSecret = `${secret.replace(/_|-/g, (match) => ({ '-': `+`, _: `/` }[match]))}&`;",
+					"    const source = this.makeSource(method, urlpath, params);",
+					"    const sign = CryptoJS.HmacSHA1(source, realSecret).toString(CryptoJS.enc.Base64);",
+					"    console.log(`sig: ${sign}`);",
+					"    return sign;",
+					"  }",
+					"  makeSource(method, pathname, params) {",
+					"    const queryString = Object.keys(params)",
+					"      .sort()",
+					"      .filter((key) => params[key] !== undefined)",
+					"      .map((key) => `${key}=${stringifyValue(params[key])}`)",
+					"      .join(`&`);",
+					"    console.log(`params : ${queryString}`);",
+					"    const source = `${method.toUpperCase()}&${urlEncode(pathname)}&${urlEncode(queryString)}`;",
+					"    console.log(`source : ${source}`);",
+					"    return source;",
+					"  }",
+					"}",
+					"",
+					"const v3sigService = new V3SigService();",
+					"const pathname = pm.request.url.getPath();",
+					"console.log('appkey:', pm.globals.get('APP_KEY'));",
+					"const sig = v3sigService.makeV3Sig(",
+					"    pm.request.method.toUpperCase(),",
+					"    pathname,",
+					"    jsonBody,",
+					"    pm.globals.get('APP_KEY'),",
+					");",
+					"/***********设置全局sig************/",
+					"pm.globals.unset(\"sig\");",
+					"pm.globals.set('sig', sig);",
+					"",
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
