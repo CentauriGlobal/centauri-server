@@ -91,7 +91,7 @@
 关于Postman脚本的信息，可以参考[Pre-request Script](https://learning.getpostman.com/docs/postman/scripts/pre_request_scripts/)。
 
 ## 注意事项
-Postman脚本需要在https://github.com/CentauriGlobal/centauri-server页面下载使用，直接复制json内容不可用。
+Postman脚本需要在https://github.com/CentauriGlobal/centauri-server 页面下载使用，直接复制json内容不可用。
 ![image](https://user-images.githubusercontent.com/82426537/123617319-b23cda00-d839-11eb-8b27-65b05248d03d.png)
 
 ## 联系我们
