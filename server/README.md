@@ -23,7 +23,7 @@
 
 其中红色方框为使用说明，需要配置的参数和请求的参数。
 
-1.设置全局的appkey，这里的appkey是接入centauri，申请应用的时候生成的，可在centauri的接入界面找到（妥善保存）。
+1.设置全局的appkey，这里的appkey是接入centauri，申请应用的时候生成的(沙箱和现网请使用对应环境的appkey)，可在centauri的接入界面找到（妥善保存）。
 
 2.点击右上角的`Environment`和下方的`Edit`，设置`Global`参数APP_KEY，点击右上角的`save`按钮保存，如下所示：
 
@@ -59,7 +59,7 @@
 
 1.设置全局的privatekey，这里的privatekey是需要业务使用OpenSSL生成私钥进行配置，公钥需要配置在centauri接入平台。
 
-2.点击右上角的`Environment`和下方的`Edit`，设置`Global`参数`APP_KEY`和`PRIVATE_KEY`，点击右上角的`save`按钮保存，如下所示：
+2.点击右上角的`Environment`和下方的`Edit`，设置`Global`参数`APP_KEY`和`PRIVATE_KEY`(沙箱和现网请使用对应环境的appkey)，点击右上角的`save`按钮保存，如下所示：
 
 <img width="2559" alt="wecom-temp-c7a4cf52d98ae18ddf0679e9abbb68d2" src="https://user-images.githubusercontent.com/82426537/122003667-f82f8200-cde5-11eb-8815-989d2f6f6782.png">
 
@@ -69,9 +69,9 @@
 ####  配置请求
 
 现在回到请求的配置界面吧。接下来，你可以按照协议去设置请求的信息了，如方法、URL、请求参数、Body。(请求参数中的`{{ts}}`、`{{sig}}`为全局变量，请求是会自动填充，无需修改)
-<img width="2559" alt="wecom-temp-65d3b5dac27d00a12704fd969d1d87ab" src="https://user-images.githubusercontent.com/82426537/122003707-02ea1700-cde6-11eb-9d2d-08d30c8f4515.png">
+<img width="2558" alt="wecom-temp-4a1a71e96f6fa085b8247f69d9fa0403" src="https://user-images.githubusercontent.com/82426537/123574898-417acb00-d803-11eb-94be-aba07c527f82.png">
 
-<img width="2559" alt="wecom-temp-ff4760590a153cb395d3a37ad9664a3d" src="https://user-images.githubusercontent.com/82426537/122003716-05e50780-cde6-11eb-8e28-a25ef4f86d45.png">
+<img width="2559" alt="wecom-temp-50b90a6bb85cd173e451b5172af448a4" src="https://user-images.githubusercontent.com/82426537/123574907-450e5200-d803-11eb-9624-107b3d6e578b.png">
 
 ####  发起请求
 
@@ -80,7 +80,7 @@
 1.点击左下方的`console`，可以看到计算`rsa签名`的各步骤的中间关键结果，以及最终算出的签名`sig`；
 
 2.最终可以在返回栏中看到游戏币各接口的请求结果。
-<img width="2559" alt="wecom-temp-ddd71983254d5b23416c964ca2112404" src="https://user-images.githubusercontent.com/82426537/122003730-0a112500-cde6-11eb-9cd2-013f4497484e.png">
+<img width="2559" alt="wecom-temp-6ce558a22979fd0b1c0f0c0528194388" src="https://user-images.githubusercontent.com/82426537/123574923-4ccdf680-d803-11eb-8531-e8168a649723.png">
 
 ## 实现原理
 
