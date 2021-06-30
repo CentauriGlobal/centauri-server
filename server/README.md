@@ -3,7 +3,7 @@
 
 ## 简介
 
-[Postman](https://www.getpostman.com/products)是一款业界知名的API开发工具。为了方便centauri接入业务快速上手，我们利用Postman强大的脚本扩展能力，编写了一套游戏币类API v3的脚本。通过这套脚本，业务可以在Postman上轻松的构造并发送游戏币类API请求。
+[Postman](https://www.getpostman.com/products)是一款业界知名的API开发工具。为了方便centauri接入业务快速上手，我们利用Postman强大的脚本扩展能力，编写了一套游戏币类API签名验证的脚本。通过这套脚本，业务可以在Postman上轻松的构造并发送游戏币类API请求。
 
 ## 导入
 
