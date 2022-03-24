@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "13909633-43e2-4ff7-8ca6-c447597c97c2",
+		"_postman_id": "d8221b07-e6bb-4ee3-9fe3-153c2e8c256d",
 		"name": "centauri_server_v3",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -38,10 +38,10 @@
 					}
 				],
 				"url": {
-					"raw": "https://sandbox.centauriglobal.com/v3/r/mpay/present_m?appid=1460000020&openid=fcb0e7dbdc3c18a6&openkey=openkey&pf=wechat_abroad_wx-2001-android-2011&pfkey=pfkey&zoneid=1&billno=202104122316&presenttimes=1000&ts={{ts}}&sig={{sig}}",
+					"raw": "https://sandbox-api.centauriglobal.com/v3/r/mpay/present_m?appid=1460000020&openid=fcb0e7dbdc3c18a6&openkey=openkey&pf=wechat_abroad_wx-2001-android-2011&pfkey=pfkey&zoneid=1&billno=202104122316&presenttimes=1000&ts={{ts}}&sig={{sig}}",
 					"protocol": "https",
 					"host": [
-						"sandbox",
+						"sandbox-api",
 						"centauriglobal",
 						"com"
 					],
@@ -119,10 +119,10 @@
 					}
 				],
 				"url": {
-					"raw": "https://sandbox.centauriglobal.com/v3/r/mpay/get_balance_m?appid=1460000020&openid=fcb0e7dbdc3c18a6&openkey=openkey&pf=wechat_abroad_wx-2001-android-2011&pfkey=pfkey&zoneid=1&ts={{ts}}&sig={{sig}}",
+					"raw": "https://sandbox-api.centauriglobal.com/v3/r/mpay/get_balance_m?appid=1460000020&openid=fcb0e7dbdc3c18a6&openkey=openkey&pf=wechat_abroad_wx-2001-android-2011&pfkey=pfkey&zoneid=1&ts={{ts}}&sig={{sig}}",
 					"protocol": "https",
 					"host": [
-						"sandbox",
+						"sandbox-api",
 						"centauriglobal",
 						"com"
 					],
@@ -206,10 +206,10 @@
 					}
 				],
 				"url": {
-					"raw": "https://sandbox.centauriglobal.com/v3/r/mpay/pay_m?appid=1460000020&openid=fcb0e7dbdc3c18a6&openkey=openkey&pf=wechat_abroad_wx-2001-android-2011&pfkey=pfKey&amt=1000&billno=202104122315&zoneid=1&appremark=213432432&ts={{ts}}&sig={{sig}}",
+					"raw": "https://sandbox-api.centauriglobal.com/v3/r/mpay/pay_m?appid=1460000020&openid=fcb0e7dbdc3c18a6&openkey=openkey&pf=wechat_abroad_wx-2001-android-2011&pfkey=pfKey&amt=1000&billno=202104122315&zoneid=1&appremark=213432432&ts={{ts}}&sig={{sig}}",
 					"protocol": "https",
 					"host": [
-						"sandbox",
+						"sandbox-api",
 						"centauriglobal",
 						"com"
 					],
@@ -291,10 +291,10 @@
 					}
 				],
 				"url": {
-					"raw": "https://sandbox.centauriglobal.com/v3/r/mpay/cancel_pay_m?appid=1460000020&openid=fcb0e7dbdc3c18a6&openkey=openkey&pf=wechat_abroad_wx-2001-android-2011&pfkey=pfkey&zoneid=1&billno=202104122315&ts={{ts}}&sig={{sig}}",
+					"raw": "https://sandbox-api.centauriglobal.com/v3/r/mpay/cancel_pay_m?appid=1460000020&openid=fcb0e7dbdc3c18a6&openkey=openkey&pf=wechat_abroad_wx-2001-android-2011&pfkey=pfkey&zoneid=1&billno=202104122315&ts={{ts}}&sig={{sig}}",
 					"protocol": "https",
 					"host": [
-						"sandbox",
+						"sandbox-api",
 						"centauriglobal",
 						"com"
 					],
@@ -352,10 +352,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://sandbox.centauriglobal.com/api/oversea/get_product_list?offer_id=1460000020&channel=os_steam&currency_type=USD&product_type=save&ts={{ts}}&sig={{sig}}",
-					"protocol": "http",
+					"raw": "https://sandbox-api.centauriglobal.com/api/oversea/get_product_list?offer_id=1460000020&channel=os_steam&currency_type=USD&product_type=save&ts={{ts}}&sig={{sig}}",
+					"protocol": "https",
 					"host": [
-						"sandbox",
+						"sandbox-api",
 						"centauriglobal",
 						"com"
 					],
