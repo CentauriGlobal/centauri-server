@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "a8b8cefb-c083-4a18-9fe2-bdc1372bbe54",
+		"name": "Midas-Billing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28295854"
+	},
+	"item": [
+		{
+			"name": "创建订单 Copy",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"app_id\": \"1460000404\",\n    \"user_id\": \"1\",\n    \"platform_type\": \"WINDOWS\",\n    \"reference_id\": \"12312111123123311112321\",\n    \"product_info\": {\n        \"unified_product_id\": \"10086\",\n        \"provider_app_id\": \"900000934\",\n        \"server_id\": \"1\",\n        \"role_id\": \"xxx\"\n    },\n    \"transaction\": {\n        \"payment_method\": \"STEAM\",\n        \"currency_code\": \"USD\",\n        \"region_code\": \"US\"\n    },\n    \"user_info\": {\n        \"age_range_id\": 2\n    },\n    \"language\": \"en\",\n    \"payload\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/billing/v3/payments/order",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"billing",
+						"v3",
+						"payments",
+						"order"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"",
+					"eval( pm.globals.get('pmlib_code') )",
+					"",
+					"",
+					"var orderID = pm.variables.replaceIn('{{$randomUUID}}').replace(/-/g, \"\");",
+					"pm.variables.set('order_id', orderID);",
+					"",
+					"",
+					"var privateKey = pm.environment.get(\"merchant_private_key\");",
+					"var merchantID = pm.environment.get(\"merchant_id\");",
+					"var serialNo = pm.environment.get(\"merchant_serial_no\");",
+					"const authIDType = \"MERCHANT_ID\";",
+					"",
+					"let sdk = require('postman-collection');",
+					"",
+					"",
+					"",
+					"",
+					"// request data does not resolve variables which makes sign-error",
+					"// see https://github.com/postmanlabs/postman-app-support/issues/3322",
+					"function replaceVariables(templateString) {",
+					"    let tokens = _.uniq(templateString.match(/{{\\w*}}/g))",
+					"    ",
+					"    _.forEach(tokens, t => {",
+					"       let variable = t.replace(/[{}]/g, '') ",
+					"       let value = environment[variable] || globals[variable]",
+					"       templateString = templateString.replace(new RegExp(t,'g'), value)",
+					"    });",
+					"    ",
+					"    return templateString",
+					"}",
+					"",
+					"var newUrl = new sdk.Url(replaceVariables(request.url));",
+					"",
+					"var now = Date.now();",
+					"var timeStamp = Math.round(now / 1000);",
+					"// var nonceStr = now;",
+					"var nonceStr = pm.variables.replaceIn('{{$randomUUID}}')",
+					"",
+					"var method = request.method;",
+					"",
+					"",
+					"",
+					"var canonicalUrl = newUrl.getPathWithQuery();",
+					"",
+					"var data = pm.variables.replaceIn(pm.request.body == undefined ? '' : pm.request.body.raw)",
+					"",
+					"// var data = \"\";",
+					"// if (method == 'POST' || method == 'PUT' || method == 'PATCH') {",
+					"//     var data = pm.request.body.raw;",
+					"//     if (canonicalUrl.endsWith('upload')) {",
+					"//         var result = JSON.parse(JSON.stringify(pm.request.body.formdata));",
+					"//         for (var i in result) {",
+					"//             if (result[i].key == 'meta') {",
+					"//                 data = result[i].value;",
+					"//             }",
+					"//         }",
+					"//     }",
+					"// }",
+					"",
+					"console.log(\"request data: \" + data)",
+					"",
+					"var message = method + \"\\n\"",
+					"+ canonicalUrl + \"\\n\"",
+					"+ timeStamp + \"\\n\"",
+					"+ nonceStr + \"\\n\"",
+					"+ data + \"\\n\";",
+					"",
+					"console.log(\"begin sign...\" + message)",
+					"",
+					"const sha256withrsa = new pmlib.rs.KJUR.crypto.Signature({\"alg\": \"SHA256withRSA\"});",
+					"",
+					"console.log(\"imported...\")",
+					"",
+					"sha256withrsa.init(privateKey);",
+					"console.log(\"inited private key...\" + privateKey)",
+					"",
+					"sha256withrsa.updateString(message);",
+					"",
+					"const sign = pmlib.rs.hextob64(sha256withrsa.sign());",
+					"",
+					"// console.log(sign);",
+					"pm.variables.set('sign', sign)",
+					"// 添加请求头",
+					"pm.request.headers.add({",
+					"    key: \"Authorization\",",
+					"    value: `TXGW-SHA256-RSA2048 auth_id=\"${merchantID}\",auth_id_type=\"${authIDType}\",serial_no=\"${serialNo}\",nonce_str=\"${nonceStr}\",timestamp=\"${timeStamp}\",signature=\"${sign}\"`",
+					"});",
+					"",
+					"// 添加灰度路由",
+					"let dyeing = {",
+					"    \"dyeing\": btoa(\"env_tag=tag-base\") ",
+					"}",
+					"pm.request.headers.add({",
+					"    key: \"trpc-trans-info\",",
+					"    value: JSON.stringify(dyeing)",
+					"})",
+					"console.log(pm.request.headers.get(\"trpc-trans-info\"))",
+					"",
+					"console.log(pm.request.headers.get(\"Authorization\"))",
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
