@@ -13,7 +13,7 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	sdk "github.com/CentauriGlobal/centauri-server/sdk"
+	sdk "github.com/CentauriGlobal/centauri-server/sdk/go"
 )
 
 func main() {
