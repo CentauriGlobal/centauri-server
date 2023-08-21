@@ -7,7 +7,7 @@
         "unified_product_id": "10086",
         "provider_app_id": "900000934",
         "server_id": "1",
-        "role_id": "xxx"
+        "role_id": "1"
     },
     "transaction": {
         "payment_method": "STEAM",
