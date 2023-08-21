@@ -1,13 +1,13 @@
 {
 	"info": {
 		"_postman_id": "a8b8cefb-c083-4a18-9fe2-bdc1372bbe54",
-		"name": "Midas-Billing",
+		"name": "Midas-Billing工作室演示 sample",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "28295854"
 	},
 	"item": [
 		{
-			"name": "创建订单 Copy",
+			"name": "Order Placement",
 			"event": [
 				{
 					"listen": "prerequest",
@@ -71,7 +71,7 @@
 					"",
 					"",
 					"var privateKey = pm.environment.get(\"merchant_private_key\");",
-					"var merchantID = pm.environment.get(\"merchant_id\");",
+					"var appId = pm.environment.get(\"merchant_id\");",
 					"var serialNo = pm.environment.get(\"merchant_serial_no\");",
 					"const authIDType = \"MERCHANT_ID\";",
 					"",
@@ -109,19 +109,6 @@
 					"",
 					"var data = pm.variables.replaceIn(pm.request.body == undefined ? '' : pm.request.body.raw)",
 					"",
-					"// var data = \"\";",
-					"// if (method == 'POST' || method == 'PUT' || method == 'PATCH') {",
-					"//     var data = pm.request.body.raw;",
-					"//     if (canonicalUrl.endsWith('upload')) {",
-					"//         var result = JSON.parse(JSON.stringify(pm.request.body.formdata));",
-					"//         for (var i in result) {",
-					"//             if (result[i].key == 'meta') {",
-					"//                 data = result[i].value;",
-					"//             }",
-					"//         }",
-					"//     }",
-					"// }",
-					"",
 					"console.log(\"request data: \" + data)",
 					"",
 					"var message = method + \"\\n\"",
@@ -145,22 +132,10 @@
 					"",
 					"// console.log(sign);",
 					"pm.variables.set('sign', sign)",
-					"// 添加请求头",
 					"pm.request.headers.add({",
 					"    key: \"Authorization\",",
-					"    value: `TXGW-SHA256-RSA2048 auth_id=\"${merchantID}\",auth_id_type=\"${authIDType}\",serial_no=\"${serialNo}\",nonce_str=\"${nonceStr}\",timestamp=\"${timeStamp}\",signature=\"${sign}\"`",
+					"    value: `SHA256-RSA2048 auth_id=\"${appId}\",auth_id_type=\"${authIDType}\",serial_no=\"${serialNo}\",nonce_str=\"${nonceStr}\",timestamp=\"${timeStamp}\",signature=\"${sign}\"`",
 					"});",
-					"",
-					"// 添加灰度路由",
-					"let dyeing = {",
-					"    \"dyeing\": btoa(\"env_tag=tag-base\") ",
-					"}",
-					"pm.request.headers.add({",
-					"    key: \"trpc-trans-info\",",
-					"    value: JSON.stringify(dyeing)",
-					"})",
-					"console.log(pm.request.headers.get(\"trpc-trans-info\"))",
-					"",
 					"console.log(pm.request.headers.get(\"Authorization\"))",
 					""
 				]
