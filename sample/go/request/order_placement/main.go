@@ -16,9 +16,11 @@ const (
 )
 
 func main() {
-	// Prepare the materials needed to calculate the signature
-	appId := "145961149415000000000"
-	serialNo := "39393631313439343138"
+	
+	// Start prepare the params needed to calculate the signature
+	
+	appId := "145961149415000000000" //midas provide
+	serialNo := "39393631313439343138" //midas provide
 
 	// read file to get the private key
 	privateKey, err := ioutil.ReadFile("../../data/private.pem")
@@ -43,9 +45,6 @@ func main() {
 		return
 	}
 
-	// add http request header
-	req.Header.Add("Content-Type", "application/json")
-
 	// calculate signature and add to header
 	signParam := sdk.SignParam{
 		Method:     METHOD,
@@ -62,7 +61,10 @@ func main() {
 		fmt.Println(err)
 		return
 	}
+	
+	// add http request header
 	req.Header.Add("Authorization", authorization)
+	req.Header.Add("Content-Type", "application/json")
 
 	// send request
 	res, err := client.Do(req)
