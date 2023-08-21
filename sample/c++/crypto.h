@@ -158,7 +158,7 @@ bool rsa_sha256_sign(const std::string& plaintext, const std::string& key_str, s
     return true;
 }
 
-bool sign(const std::string& method, const std::string& url, const std::string& body, const std::string& auth_id,
+bool sign(const std::string& method, const std::string& path, const std::string& body, const std::string& auth_id,
           const std::string& serial_no, const std::string& key_str, std::string& authorization, std::string& err_msg) {
     std::stringstream ss;
     ss << time(NULL);
@@ -172,7 +172,7 @@ bool sign(const std::string& method, const std::string& url, const std::string& 
         int x = rand() % (sizeof(CCH) - 1);
         nonce += CCH[x];
     }
-    std::string message = method + "\n" + url + "\n" + timestamp + "\n" + nonce + "\n" + body + "\n";
+    std::string message = method + "\n" + path + "\n" + timestamp + "\n" + nonce + "\n" + body + "\n";
     std::string signature;
     if (rsa_sha256_sign(message, key_str, signature, err_msg) != true) {
         return false;
