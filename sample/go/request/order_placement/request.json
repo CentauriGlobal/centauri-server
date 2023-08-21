@@ -1,0 +1,22 @@
+{
+    "app_id": "1460000404",
+    "user_id": "1",
+    "platform_type": "WINDOWS",
+    "reference_id": "12312111123123311112321",
+    "product_info": {
+        "unified_product_id": "10086",
+        "provider_app_id": "900000934",
+        "server_id": "1",
+        "role_id": "xxx"
+    },
+    "transaction": {
+        "payment_method": "STEAM",
+        "currency_code": "USD",
+        "region_code": "US"
+    },
+    "user_info": {
+        "age_range_id": 2
+    },
+    "language": "en",
+    "payload": ""
+}
