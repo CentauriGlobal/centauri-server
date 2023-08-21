@@ -10,6 +10,7 @@ import (
 )
 
 func main() {
+	
 	// timestamp retrived from the http header
 	timestamp := 1692154465
 	// nonce retrived from the http header
