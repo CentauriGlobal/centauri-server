@@ -5,6 +5,7 @@
 * midas_billing_scripts: postman collections and environment variables used to interact with Midas system. To use this script, you need to install 'pmlib_code'.
 * sdk: golang library used to perform signing and verifying.
 * server: do not need to focus on.
+* sample: samples used to show you how to request.
 
 ## How to install pmlib_code
 
