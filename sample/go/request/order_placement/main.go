@@ -43,9 +43,6 @@ func main() {
 		return
 	}
 
-	// add http request header
-	req.Header.Add("Content-Type", "application/json")
-
 	// calculate signature and add to header
 	signParam := sdk.SignParam{
 		Method:     METHOD,
@@ -62,7 +59,10 @@ func main() {
 		fmt.Println(err)
 		return
 	}
+
+	// add http request header
 	req.Header.Add("Authorization", authorization)
+	req.Header.Add("Content-Type", "application/json")
 
 	// send request
 	res, err := client.Do(req)
