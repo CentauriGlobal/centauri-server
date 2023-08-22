@@ -16,11 +16,9 @@ const (
 )
 
 func main() {
-	
-	// Start prepare the params needed to calculate the signature
-	
-	appId := "145961149415000000000" //midas provide
-	serialNo := "39393631313439343138" //midas provide
+	// Prepare the materials needed to calculate the signature
+	appId := "1460000404"
+	serialNo := "39393631313439343138"
 
 	// read file to get the private key
 	privateKey, err := ioutil.ReadFile("../../data/private.pem")
@@ -53,15 +51,15 @@ func main() {
 		AppID:      appId,
 		SerialNo:   serialNo,
 		PrivateKey: privateKey,
-		// hero we use MERCHANT_ID, in real production environment, you don't need to specify this field
-		AuthIdType: "MERCHANT_ID",
+		// hero we use app_id, in real production environment, you don't need to specify this field
+		AuthIdType: "app_id",
 	}
 	authorization, err := sdk.Sign(req.Context(), signParam)
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
-	
+
 	// add http request header
 	req.Header.Add("Authorization", authorization)
 	req.Header.Add("Content-Type", "application/json")
