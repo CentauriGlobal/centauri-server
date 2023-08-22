@@ -17,7 +17,7 @@ const (
 
 func main() {
 	// Prepare the materials needed to calculate the signature
-	appId := "145961149415000000000"
+	appId := "1460000404"
 	serialNo := "39393631313439343138"
 
 	// read file to get the private key
@@ -54,8 +54,8 @@ func main() {
 		AppID:      appId,
 		SerialNo:   serialNo,
 		PrivateKey: privateKey,
-		// hero we use MERCHANT_ID, in real production environment, you don't need to specify this field
-		AuthIdType: "MERCHANT_ID",
+		// hero we use app_id, in real production environment, you don't need to specify this field
+		AuthIdType: "app_id",
 	}
 	authorization, err := sdk.Sign(req.Context(), signParam)
 	if err != nil {
