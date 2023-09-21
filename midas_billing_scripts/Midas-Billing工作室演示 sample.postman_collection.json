@@ -1,11 +1,106 @@
 {
 	"info": {
 		"_postman_id": "a8b8cefb-c083-4a18-9fe2-bdc1372bbe54",
-		"name": "Midas-Billing工作室演示 sample",
+		"name": "Midas-Billing Samples for Oversea Studio",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "28295854"
 	},
 	"item": [
+		{
+			"name": "Game Currency",
+			"item": [
+				{
+					"name": "Gift",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"app_id\": \"1460000404\",\n    \"user_id\": \"uid5117557101\",\n    \"platform_type\": \"WINDOWS\",\n    \"reference_id\": \"1112\",\n    \"provider_app_id\": \"900000934\",\n    \"resource_id\": \"RES-OQ16R6V4SJJJ\",\n    \"server_id\": \"1\",\n    \"role_id\": \"xxx\",\n    \"amount\": 1,\n    \"user_info\": {\n        \"age_range_id\": 2\n    },\n    \"remark\": \"asdas\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/billing/v3/accounts/currency/gift",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"billing",
+								"v3",
+								"accounts",
+								"currency",
+								"gift"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consume",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"app_id\": \"1460000404\",\n    \"user_id\": \"uid5117557101\",\n    \"platform_type\": \"WINDOWS\",\n    \"reference_id\": \"ccc12\",\n    \"provider_app_id\": \"900000934\",\n    \"resource_id\": \"RES-OQ16R6V4SJJJ\",\n    \"server_id\": \"1\",\n    \"role_id\": \"xxx\",\n    \"amount\": 1,\n    \"user_info\": {\n        \"age_range_id\": 2\n    },\n    \"remark\": \"asdas\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/billing/v3/accounts/currency/consume",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"billing",
+								"v3",
+								"accounts",
+								"currency",
+								"consume"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rollback",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"app_id\": \"1460000404\",\n    \"user_id\": \"uid5117557101\",\n    \"platform_type\": \"WINDOWS\",\n    \"reference_id\": \"ccc12\",\n    \"provider_app_id\": \"900000934\",\n    \"resource_id\": \"RES-OQ16R6V4SJJJ\",\n    \"server_id\": \"1\",\n    \"role_id\": \"xxx\",\n    \"user_info\": {\n        \"age_range_id\": 2\n    },\n    \"remark\": \"asdas\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/billing/v3/accounts/currency/rollback",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"billing",
+								"v3",
+								"accounts",
+								"currency",
+								"rollback"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
 		{
 			"name": "Order Placement",
 			"event": [
@@ -54,6 +149,35 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Query Balance",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"app_id\": \"1460000404\",\n    \"user_id\": \"uid5117557101\",\n    \"platform_type\": \"WINDOWS\",\n    \"reference_id\": \"12312111123123311112321\",\n    \"provider_app_id\": \"900000934\",\n    \"currency_resource_id\": \"RES-OQ16R6V4SJJJ\",\n    \"subscription_resource_id\": \"\",\n    \"server_id\": \"1\",\n    \"role_id\": \"xxx\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/billing/v3/accounts/query",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"billing",
+						"v3",
+						"accounts",
+						"query"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [
@@ -70,10 +194,10 @@
 					"pm.variables.set('order_id', orderID);",
 					"",
 					"",
-					"var privateKey = pm.environment.get(\"merchant_private_key\");",
-					"var appId = pm.environment.get(\"merchant_id\");",
-					"var serialNo = pm.environment.get(\"merchant_serial_no\");",
-					"const authIDType = \"MERCHANT_ID\";",
+					"var privateKey = pm.environment.get(\"private_key\");",
+					"var appId = pm.environment.get(\"app_id\");",
+					"var serialNo = pm.environment.get(\"serial_no\");",
+					"const authIDType = \"app_id\";",
 					"",
 					"let sdk = require('postman-collection');",
 					"",
