@@ -1,8 +1,10 @@
 {
 	"info": {
-		"_postman_id": "8ae28392-fc26-452a-b21a-0085424743e1",
+		"_postman_id": "7aad3c7b-b8e8-477f-a6a5-20f04fd1de3f",
 		"name": "centauri_server_rsa",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12236096",
+		"_collection_link": "https://solar-moon-315654.postman.co/workspace/centauri~aed27a44-1c13-4781-a035-a14330a5e3a2/collection/12236096-7aad3c7b-b8e8-477f-a6a5-20f04fd1de3f?action=share&source=collection_link&creator=12236096"
 	},
 	"item": [
 		{
@@ -91,10 +93,10 @@
 					}
 				],
 				"url": {
-					"raw": "https://sandbox-api.centauriglobal.com/api/oversea/present_m?appid=1450011705&openid=10272906747473823887&openkey=openkey&pf=wechat_abroad_wx-2001-android-2011&pfkey=pfkey&zoneid=1&billno=202104122316&presenttimes=10&ts={{ts}}&sig={{sig}}&sig_type=rsa_sha256",
+					"raw": "https://sandbox.centauriglobal.com/api/oversea/present_m?appid=1450011705&openid=10272906747473823887&openkey=openkey&pf=wechat_abroad_wx-2001-android-2011&pfkey=pfkey&zoneid=1&billno=202104122316&presenttimes=10&ts={{ts}}&sig={{sig}}&sig_type=rsa_sha256",
 					"protocol": "https",
 					"host": [
-						"sandbox-api",
+						"sandbox",
 						"centauriglobal",
 						"com"
 					],
@@ -238,10 +240,10 @@
 					}
 				],
 				"url": {
-					"raw": "https://sandbox-api.centauriglobal.com/api/oversea/get_balance_m?appid=1450011705&openid=10272906747473823887&openkey=openkey&pf=wechat_abroad_wx-2001-android-2011&pfkey=pfkey&zoneid=1&sig_type=rsa_sha256&ts={{ts}}&sig={{sig}}",
+					"raw": "https://sandbox.centauriglobal.com/api/oversea/get_balance_m?appid=1450011705&openid=10272906747473823887&openkey=openkey&pf=wechat_abroad_wx-2001-android-2011&pfkey=pfkey&zoneid=1&sig_type=rsa_sha256&ts={{ts}}&sig={{sig}}",
 					"protocol": "https",
 					"host": [
-						"sandbox-api",
+						"sandbox",
 						"centauriglobal",
 						"com"
 					],
@@ -389,10 +391,10 @@
 					}
 				],
 				"url": {
-					"raw": "https://sandbox-api.centauriglobal.com/api/oversea/pay_m?appid=1450011705&openid=10272906747473823887&openkey=openkey&pf=wechat_abroad_wx-2001-android-2011&pfkey=pfKey&amt=1000&billno=202104122315&zoneid=1&appremark=213432432&ts={{ts}}&sig={{sig}}&sig_type=rsa_sha256",
+					"raw": "https://sandbox.centauriglobal.com/api/oversea/pay_m?appid=1450011705&openid=10272906747473823887&openkey=openkey&pf=wechat_abroad_wx-2001-android-2011&pfkey=pfKey&amt=1000&billno=202104122315&zoneid=1&appremark=213432432&ts={{ts}}&sig={{sig}}&sig_type=rsa_sha256",
 					"protocol": "https",
 					"host": [
-						"sandbox-api",
+						"sandbox",
 						"centauriglobal",
 						"com"
 					],
@@ -540,10 +542,10 @@
 					}
 				],
 				"url": {
-					"raw": "https://sandbox-api.centauriglobal.com/api/oversea/cancel_pay_m?appid=1450011705&openid=10272906747473823887&openkey=openkey&pf=wechat_abroad_wx-2001-android-2011&pfkey=pfkey&zoneid=1&billno=202104122315&ts={{ts}}&sig={{sig}}&sig_type=rsa_sha256",
+					"raw": "https://sandbox.centauriglobal.com/api/oversea/cancel_pay_m?appid=1450011705&openid=10272906747473823887&openkey=openkey&pf=wechat_abroad_wx-2001-android-2011&pfkey=pfkey&zoneid=1&billno=202104122315&ts={{ts}}&sig={{sig}}&sig_type=rsa_sha256",
 					"protocol": "https",
 					"host": [
-						"sandbox-api",
+						"sandbox",
 						"centauriglobal",
 						"com"
 					],
@@ -667,10 +669,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://sandbox-api.centauriglobal.com/api/oversea/get_product_list?offer_id=1450011705&channel=os_steam&currency_type=USD&product_type=save&ts={{ts}}&sig={{sig}}&sig_type=rsa_sha256",
-					"protocol": "https",
+					"raw": "http://sandbox.centauriglobal.com/api/oversea/get_product_list?offer_id=1450011705&channel=os_steam&currency_type=USD&ts={{ts}}&sig={{sig}}&sig_type=rsa_sha256",
+					"protocol": "http",
 					"host": [
-						"sandbox-api",
+						"sandbox",
 						"centauriglobal",
 						"com"
 					],
@@ -694,7 +696,8 @@
 						},
 						{
 							"key": "product_type",
-							"value": "save"
+							"value": "save",
+							"disabled": true
 						},
 						{
 							"key": "ts",
@@ -748,6 +751,161 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "get_water_m",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Loading the library",
+							"eval(pm.globals.get('pmlib_code'))",
+							"",
+							"",
+							"/***********设置时间戳************/",
+							"var req_ts=Math.round(new Date()/1000);",
+							"pm.globals.unset(\"ts\");",
+							"pm.globals.set(\"ts\", req_ts);",
+							"",
+							"const stringifyValue = (value) => {",
+							"  if (value === null || value === undefined) {",
+							"    return ``;",
+							"  }",
+							"  if (typeof value === `object`) {",
+							"    return JSON.stringify(value);",
+							"  }",
+							"  return String(value);",
+							"};",
+							"",
+							"/***********签名算法************/",
+							"let jsonBody = {};",
+							"const paramsString = request.url.split('?')[1];",
+							"const eachParamArray = paramsString.split('&');",
+							"eachParamArray.forEach((param) => {",
+							"    const key = param.split('=')[0];",
+							"    const value = param.split('=')[1];",
+							"    Object.assign(jsonBody, {[key]: value});",
+							"});",
+							"delete jsonBody.sig",
+							"jsonBody[\"ts\"]=req_ts",
+							"",
+							"const queryString = Object.keys(jsonBody)",
+							"      .sort()",
+							"      .filter((key) => jsonBody[key] !== undefined)",
+							"      .map((key) => `${key}=${stringifyValue(jsonBody[key])}`)",
+							"      .join(`&`);",
+							"",
+							"const privKey = pm.globals.get('PRIVATE_KEY')",
+							"",
+							"var sig = new pmlib.rs.crypto.Signature({\"alg\": \"SHA256withRSA\"});",
+							"sig.init(privKey)",
+							"",
+							"const appkey=pm.globals.get('APP_KEY')",
+							"console.log(`params : ${queryString+appkey}`);",
+							"var hash = sig.signString(queryString+appkey);",
+							"const signedEncoded = CryptoJS.enc.Base64.stringify(CryptoJS.enc.Hex.parse(hash));",
+							"console.log(`sig : ${signedEncoded}`)",
+							"",
+							"/***********设置全局sig************/",
+							"pm.globals.unset(\"sig\");",
+							"pm.globals.set('sig', signedEncoded, String);",
+							"pm.environment.set(\"sig\", signedEncoded);",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "org_loc=/api/oversea/get_water_m",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "session_id=hy_gameid",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "session_type=st_dummy",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://sandbox.centauriglobal.com/api/oversea/get_water_m?openid=10272906747473823887&openkey=openkey&pf=wechat_abroad_wx-2001-android-2011&pfkey=pfKey&zoneid=1&starttime=1677052922&endtime=1703232122&cursor=1&base_tran_type=2&ts={{ts}}&sig={{sig}}&sig_type=rsa_sha256&appid=1450011705",
+					"protocol": "http",
+					"host": [
+						"sandbox",
+						"centauriglobal",
+						"com"
+					],
+					"path": [
+						"api",
+						"oversea",
+						"get_water_m"
+					],
+					"query": [
+						{
+							"key": "openid",
+							"value": "10272906747473823887"
+						},
+						{
+							"key": "openkey",
+							"value": "openkey"
+						},
+						{
+							"key": "pf",
+							"value": "wechat_abroad_wx-2001-android-2011"
+						},
+						{
+							"key": "pfkey",
+							"value": "pfKey"
+						},
+						{
+							"key": "zoneid",
+							"value": "1"
+						},
+						{
+							"key": "starttime",
+							"value": "1677052922"
+						},
+						{
+							"key": "endtime",
+							"value": "1703232122"
+						},
+						{
+							"key": "cursor",
+							"value": "1"
+						},
+						{
+							"key": "base_tran_type",
+							"value": "2"
+						},
+						{
+							"key": "ts",
+							"value": "{{ts}}"
+						},
+						{
+							"key": "sig",
+							"value": "{{sig}}"
+						},
+						{
+							"key": "sig_type",
+							"value": "rsa_sha256"
+						},
+						{
+							"key": "appid",
+							"value": "1450011705"
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [
@@ -756,10 +914,7 @@
 			"script": {
 				"type": "text/javascript",
 				"exec": [
-					"/***********使用说明************/",
-					"//1.参数中对于ts、sig设置为变量的形式{{ts}}、{{sig}}",
-					"//2.设置全局的appkey,即APP_KEY=xxxxx ",
-					"//3.设置全局的rsa私钥privatekey,即PRIVATE_KEY=xxxxx "
+					""
 				]
 			}
 		},
